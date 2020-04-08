@@ -1,7 +1,7 @@
 security:
   oauth2:
     client:
-      clientId: {your-client-id-here}
-      clientSecret: {your-client-secret-here}
+      clientId: <clientId>
+      clientSecret: <clientSecrect>
     resource:
-      tokenInfoUri: {your-issuer-url-here}/v1/introspect
+      tokenInfoUri: https://<oktaurl>.oktapreview.com/oauth2/default/v1/introspect

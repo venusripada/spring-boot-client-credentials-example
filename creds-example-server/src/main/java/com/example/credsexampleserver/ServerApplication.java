@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
+import java.util.HashMap;
+import java.util.Map;
 
 @EnableResourceServer
 @SpringBootApplication
@@ -36,8 +38,10 @@ public class ServerApplication {
     public class MessageOfTheDayController {
         @GetMapping("/mod")
         @PreAuthorize("#oauth2.hasScope('custom_mod')")
-        public String getMessageOfTheDay(Principal principal) {
-            return "The message of the day is boring for user: " + principal.getName();
+        public Map getMessageOfTheDay(Principal principal) {
+            Map map = new HashMap();
+            map.put("response", "The message of the day is boring for user: " + principal.getName());
+            return map;
         }
     }
 }

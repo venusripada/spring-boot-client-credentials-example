@@ -3,7 +3,7 @@ example:
     oauth2:
         client:
             grant-type: client_credentials
-            clientId: {your-client-id-here}
-            clientSecret: {your-client-secret-here}
-            accessTokenUri: {your-issuer-url-here}/v1/token
+            clientId: <clientId>
+            clientSecret: <clientSecrect>
+            accessTokenUri: https://<oktaURL>/oauth2/default/v1/token
             scope: custom_mod

@@ -31,7 +31,7 @@ public class ClientApplication implements CommandLineRunner {
 
     @Bean
     protected OAuth2RestTemplate restTemplate() {
-        return new OAuth2RestTemplate(oAuthDetails());
+            return new OAuth2RestTemplate(oAuthDetails());
     }
 
     @Override
